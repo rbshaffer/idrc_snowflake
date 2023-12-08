@@ -1,21 +1,16 @@
-# Title of Program
+# IDRC Snowflake sample queries and access information
 
-#### Author's Name:
-#### Author's Organization:
-#### Author's Email:
+#### Author's Name: Robert Shaffer
+#### Author's Organization: OEDA/IPAG
+#### Author's Email: robert.shaffer@cms.hhs.gov
 
 # Requirements
 
-Please list any requirements for the user. This includes any tools they need to download or get access to (include job codes, instructions, etc.), dependencies, and/or the environment where the code can run (e.g., SAS in IDR)
+This repository is contains code designed to help users access and use IDRC Snowflake. Connecting to IDR Snowflake requires that you be connected to the CMS VPN as well as Snowflake-appropriate job codes. See [this Confluence page](https://confluenceent.cms.gov/display/IDRCC/IDRC+Onboarding+-+Snowflake+UI+Access) for instructions.
+
+To access the IDRC Snowflake browser IDE, navigate to [https://app-cms-idr.privatelink.snowflakecomputing.com/cms/idr/](https://app-cms-idr.privatelink.snowflakecomputing.com/cms/idr/), and authenticate with your PIV/EUA credentials. If you can log in, then you should be able to do everything else in this repository.
 
 # Repo Structure
 
-Please provide a list of any folders or files that are in your repository. For example, if you have a program called "Analyzing Medicare Claims" and a CSV file called "ffs_clms_02122022.csv", you should write something here like:
-
-* Analyzing Medicare Claims - jupyter notebook containing analysis on medicare claims
-* ffs_clms_02122022.csv - CSV files ingested by the jupyter notebook
-
-# Purpose of the Program
-
-
-If you have any questions regarding the template, please contact Leo Meister (leo.meister@cms.hhs.gov) and Avena Cheng (avena.cheng@cms.hhs.gov).
+* [connections/](connections/) contains information on connecting to IDRC Snowflake.
+* [sample_queries/](sample_queries/) contains sample queries that you might need in the IDRC
