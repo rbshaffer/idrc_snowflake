@@ -132,3 +132,13 @@ In this case, there are no results to fetch, so there's no need to use the `cur.
 - [IDRC Confluence](https://confluenceent.cms.gov/pages/viewpage.action?spaceKey=IDRCC&title=IDRC+Communications)
  - IDR's ["best practices"](https://confluenceent.cms.gov/download/attachments/489926811/IDR-User-Guide-Other-Access-Best-Practices.pdf?version=1&modificationDate=1726499246390&api=v2) guide for non-browser Snowflake connections.
  - IDR [job code information](https://confluenceent.cms.gov/display/IDRCC/IDRC+Onboarding+-+EUA+Job+Codes+for+IDRC) 
+
+## About the project
+### Project mission
+This project houses documentation and startup information designed to help new users access the IDRC Snowflake instance using Python. 
+### Project vision
+Short-term, this project is designed to get new Centers for Medicare and Medicaid Services (CMS) users and contractors up and running in the IDR using Python. Longer-term, this project may expand to house Python developer tools and resources for the broader CMS community.
+### Agency mission
+CMS is a the federal agency that provides health coverage to more than 160 million throug hMedicare, Medicaid, the Children's Health Insurance Program, and the Health Insurance Marketplace.
+### Team mission
+This project is a joint venture established by internal federal users in the IDR. Our team's goal is to support new users who are interested in accessing the IDR in their work. 
