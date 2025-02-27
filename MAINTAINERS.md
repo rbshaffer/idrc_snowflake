@@ -7,7 +7,7 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 |Role |Name |Github Username |Affiliation|
 |:-----|:-----|:-----|:-----|
 | Admin | Robert Shaffer | SFNB | CMS Data Users Cookbook |
-| Admin | Leo Meister | LPBU | CMS Data Users Cookbook |
+| Admin | Leo Meister | LPBU | CMS/OEDA/IPAG |
 
 ## Contributors
 
