@@ -20,7 +20,7 @@ import snowflake.connector
 
 ctx = snowflake.connector.connect(
           account="cms-idr.privatelink",
-          user="<your_eua>",
+          user="<YOUR_EUA>",
           authenticator="externalbrowser"
     )
 ```
@@ -49,7 +49,7 @@ At this point, you can manipulate your results (saved in the `df` object) as a s
 ## Connection options
 The first step in connecting to the IDR's Snowflake instance is to specify your connection parameters. The three required parameters are:
 1. `account="cms-idr.privatelink"`
-2. `user = "<your_eua>"`. For example, if your EUA is TRTY, specify `user="TRTY"`.
+2. `user = "<YOUR_EUA>"`. For example, if your EUA is TRTY, specify `user="TRTY"`.
 3. `authenticator="externalbrowser"`.
 
 In addition to these required parameters, you can also specify a set of other parameters if you'd like. These paramters are entirely optional, and will populate or replace IDR-specified defaults:
@@ -62,7 +62,7 @@ Each parameter should be specified as an additional argument to the Snowflake co
 ```
 ctx = snowflake.connector.connect(
           host="cms-idr.privatelink",
-          user="<your_eua>",
+          user="<YOUR_EUA>",
           authenticator="externalbrowser",
           warehouse="IDRC_PRD_COMM_WH",
           database="IDRC_PRD",
@@ -100,24 +100,29 @@ In general, try to aggregate data before downloading. Conduct your heavier compu
 If you're authorized to write data to an IDR ADM/VDM, you can do so in Python using the [`write_pandas()` function](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-api#module-snowflake-connector-pandas-tools). For example, using the same connection object as above:
 ```
 import pandas as pd
+import snowflake.connector.pandas_tools
 
 df = pd.read_csv("path/to/your/file.csv")
-write_pandas(
-    conn = cnx, 
+snowflake.connector.pandas_tools.write_pandas(
+    conn = ctx, 
     df = df, 
-    table_name = "<your_table>",
+    table_name = "<YOUR_TABLE>",
     database = "IDRC_PRD",
-    schema = "<your_adm_or_vdm>"
+    schema = "<YOUR_ADM>",
+    auto_create_table=True,
+    overwrite=True
 )
 ```
-Here, `df` should be a pandas dataframe. In this example, we're reading the pandas dataframe from a local CSV, but you can load any Pandas dataframe to the IDR in this fashion.
+Setting `auto_create_table=True` will create the table if it doesn't exist. Setting `overwrite=True` will overwrite the table (instead of appending).
+
+Note that you should capitalize table names and schemas! In addition, column names in any Pandas dataframe should be valid Snowflake column names. `df` should be a pandas dataframe. In this example, we're reading the pandas dataframe from a local CSV, but you can load any Pandas dataframe to the IDR in this fashion.
 
 ## Running arbitrary SQL statements
 If you're interested in running somehting other than a simple `SELECT` statement - such as a `CREATE TABLE` statement or something similar - you might not want to use Pandas to execute your SQL command. Instead, you can run a SQL command with a cursor directly:
 ```
 with ctx.cursor() as cur:
     cur.execute("""
-        CREATE TABLE IDRC_PRD.<your_adm_or_vdm>.<your_table> AS
+        CREATE TABLE IDRC_PRD.<YOUR_ADM>.<YOUR_TABLE> AS
             SELECT * FROM IDRC_PRD.CMS_VDM_VIEW_MDCR_PRD.V2_MDCR_BENE
             LIMIT 10
     """)
