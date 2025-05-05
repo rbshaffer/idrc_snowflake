@@ -135,7 +135,7 @@ In this case, there are no results to fetch, so there's no need to use the `cur.
  - Specific information on the [Snowflake Python connector](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector)
 - [Pandas documentation](https://pandas.pydata.org/docs/)
 - [IDRC Confluence](https://confluenceent.cms.gov/pages/viewpage.action?spaceKey=IDRCC&title=IDRC+Communications)
- - IDR's ["best practices"](https://confluenceent.cms.gov/download/attachments/489926811/IDR-User-Guide-Other-Access-Best-Practices.pdf?version=1&modificationDate=1726499246390&api=v2) guide for non-browser Snowflake connections.
+ - [IDR's "best practices"](https://confluenceent.cms.gov/download/attachments/489926811/IDR-User-Guide-Other-Access-Best-Practices.pdf?version=1&modificationDate=1726499246390&api=v2) guide for non-browser Snowflake connections.
  - IDR [job code information](https://confluenceent.cms.gov/display/IDRCC/IDRC+Onboarding+-+EUA+Job+Codes+for+IDRC) 
 
 ## About the project
